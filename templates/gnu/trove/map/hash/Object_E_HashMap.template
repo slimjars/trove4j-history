@@ -78,6 +78,7 @@ public class TObject#E#HashMap<K> extends TObjectHash<K>
      */
     public TObject#E#HashMap() {
         super();
+        no_entry_value = Constants.DEFAULT_#EC#_NO_ENTRY_VALUE;
     }
 
 

@@ -79,6 +79,7 @@ public class TObject#E#CustomHashMap<K> extends TCustomObjectHash<K>
      */
     public TObject#E#CustomHashMap( HashingStrategy<? super K> strategy ) {
         super( strategy );
+        no_entry_value = Constants.DEFAULT_#EC#_NO_ENTRY_VALUE;
     }
 
 
