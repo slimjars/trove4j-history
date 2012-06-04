@@ -1,9 +1,7 @@
---- 3.0.4 ---
-  - [3460395] no_entry_value is set always to 0 in map default constructor
-
 --- 3.0.3 ---
 Bugs Fixed:
   - [3445639] ArrayIndexOutOfBoundsException from TIntHashSet.retainAll
+  - [3460395] no_entry_value is set always to 0 in map default constructor
 
 --- 3.0.2 ---
 Bug Fixed:

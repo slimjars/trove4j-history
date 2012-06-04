@@ -1912,4 +1912,21 @@ public class TPrimitiveObjectHashMapTest extends TestCase {
         assertEquals( pp_float_map.get( zero_float ), 0 );
         assertEquals( pp_float_map.get( negative_zero_float ), 0 );
     }
+
+
+	// Testing issue from:
+	//    https://sourceforge.net/projects/trove4j/forums/forum/121845/topic/4969032
+	public void testForumIssue_20120124() {
+		TIntObjectHashMap<String> string_map = new TIntObjectHashMap<String>();
+		string_map.put( 1, "one" );
+		string_map.put( 2, "two" );
+		string_map.put( 3, "three" );
+
+		int count = 0;
+		for ( final String string : string_map.values( new String[ 0 ] ) ) {
+			count++;
+		}
+
+		assertEquals( 3, count );
+	}
 }
