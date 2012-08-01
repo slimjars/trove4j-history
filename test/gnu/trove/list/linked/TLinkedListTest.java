@@ -158,6 +158,17 @@ public class TLinkedListTest extends TestCase {
         }
     }
 
+	public void testInsert_bug3484640() {
+		list.insert( 0, new Data( 0 ) );
+		list.insert( 0, new Data( 1 ) );
+		list.insert( 0, new Data( 2 ) );
+
+		assertEquals( 3, list.size() );
+		assertEquals( new Data( 2 ), list.get( 0 ) );
+		assertEquals( new Data( 1 ), list.get( 1 ) );
+		assertEquals( new Data( 0 ), list.get( 2 ) );
+	}
+
 
     public void testToArray() {
         Data[] data = {new Data( 1 ), new Data( 2 ), new Data( 3 ),
