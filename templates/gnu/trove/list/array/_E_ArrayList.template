@@ -738,7 +738,9 @@ public class T#E#ArrayList implements T#E#List, Externalizable {
         if ( other == this ) {
             return true;
         }
-        else if ( other instanceof T#E#ArrayList ) {
+        if ( !( other instanceof T#E#List ) ) return false;
+
+        if ( other instanceof T#E#ArrayList ) {
             T#E#ArrayList that = ( T#E#ArrayList )other;
             if ( that.size() != this.size() ) return false;
             else {
@@ -750,7 +752,15 @@ public class T#E#ArrayList implements T#E#List, Externalizable {
                 return true;
             }
         }
-        else return false;
+        else {
+            T#E#List that = ( T#E#List )other;
+            for( int i = 0; i < _pos; i++ ) {
+                if ( this._data[ i ] != that.get( i ) ) {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 
 

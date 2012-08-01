@@ -1,3 +1,7 @@
+--- 3.0.4 ---
+Bugs Fixed:
+  - [3552578] TUnmodifiableIntList equals is broken
+
 --- 3.0.3 ---
 Bugs Fixed:
   - [3445639] ArrayIndexOutOfBoundsException from TIntHashSet.retainAll
