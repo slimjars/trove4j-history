@@ -8,3 +8,41 @@ Trove4j source code:
 * [bitbucket-original](../../tree/bitbucket-original)
 * [bitbucket-clean](../../tree/bitbucket-clean)
 * [full-history](../../tree/bitbucket-clean)
+
+
+## svn-original
+
+This is the original source repository as imported from the SourceForge SVN
+repository
+
+
+## svn-clean
+
+This is the same as `svn-original` with the newlines converted from DOS to Unix as
+per:
+
+    git filter-branch --tree-filter "find . -type f | xargs dos2unix"
+
+
+## bitbucket-original
+
+This is a mirror of the BitBucket repository.
+
+
+## bitbucket-clean
+
+This is the same as `bitbucket-original` with the newlines converted from DOS to Unix as
+per:
+
+    git filter-branch --tree-filter "find . -type f | xargs dos2unix"
+
+And the permissions of all files fixed, such that the executable bit is not set
+on most regular files as per:
+
+    git filter-branch --tree-filter "find . -type f | xargs chmod 644"
+
+
+## full-history
+
+This branch contains the history of `svn-clean` plus the history from
+`bitbucket-clean` applied on top.
