@@ -26,7 +26,8 @@ per:
 
 ## bitbucket-original
 
-This is a mirror of the BitBucket repository.
+This is a mirror of the master branch from the BitBucket repository at
+<https://bitbucket.org/trove4j/trove.git>.
 
 
 ## bitbucket-clean
