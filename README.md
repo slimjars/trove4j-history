@@ -13,7 +13,7 @@ Trove4j source code:
 ## svn-original
 
 This is the original source repository as imported from the SourceForge SVN
-repository
+repository at <https://svn.code.sf.net/p/trove4j/code/>.
 
 
 ## svn-clean
