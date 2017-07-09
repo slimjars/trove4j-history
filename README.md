@@ -7,7 +7,7 @@ Trove4j source code:
 * [svn-clean](../../tree/svn-clean)
 * [bitbucket-original](../../tree/bitbucket-original)
 * [bitbucket-clean](../../tree/bitbucket-clean)
-* [full-history](../../tree/bitbucket-clean)
+* [full-history](../../tree/full-history)
 
 
 ## svn-original
