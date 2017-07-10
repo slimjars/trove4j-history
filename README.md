@@ -46,4 +46,23 @@ on most regular files as per:
 ## full-history
 
 This branch contains the history of `svn-clean` plus the history from
-`bitbucket-clean` applied on top.
+`bitbucket-clean` applied on top. It has been set up like this:
+
+    git checkout bitbucket-clean
+    git checkout -b full-history
+    git rebase --onto svn-clean --root --keep-empty --preserve-merges
+
+This will stop with the following message:
+
+    The previous cherry-pick is now empty, possibly due to conflict resolution.
+    ...
+    pick 609d1f4 Imported from SVN by Bitbucket
+
+We'll continue like this:
+
+    git commit --allow-empty
+    git rebase --continue
+
+Afterwards, fix the committer dates:
+
+    git filter-branch --env-filter 'export GIT_COMMITTER_DATE="$GIT_AUTHOR_DATE"'
